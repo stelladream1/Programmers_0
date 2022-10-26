@@ -1,0 +1,8 @@
+def solution(my_str, n):
+    array = []
+    print(my_str[0:5])
+    print(my_str[6:11])
+    print(my_str[12:17])
+    for i in range(0,len(my_str),n):
+        array.append(my_str[i:i+n])
+    return array
