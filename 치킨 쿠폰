@@ -17,10 +17,22 @@
 #     count  = count + (result // 10)
 #     return(count)
 
+-----------------------------------------
+# def solution(chicken):
+#     answer = 0
+#     while chicken >= 10:
+#         chicken, mod = divmod(chicken, 10)
+#         answer += chicken
+#         chicken += mod
+#     return answer
+    
 def solution(chicken):
-    answer = 0
-    while chicken >= 10:
-        chicken, mod = divmod(chicken, 10)
-        answer += chicken
-        chicken += mod
-    return answer
+    count = 0
+
+    while True:
+            chicken, div = divmod(chicken, 10)
+            count = count + chicken
+            chicken = chicken + div
+            if chicken < 10:
+                break
+    return(count)
