@@ -1,0 +1,12 @@
+def solution(n):
+    i = 0
+    while True:
+            
+            if n == i **2:
+                return 1
+                break
+            else:
+                i = i + 1
+            if i **2 < n and n< (i+1)**2:
+                return 2
+                break
