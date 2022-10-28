@@ -1,0 +1,6 @@
+def solution(age):
+    result = ""
+    age= str(age)
+    for i in range(len(age)):
+        result = result + chr(int(age[i])+65).lower()
+    return result
