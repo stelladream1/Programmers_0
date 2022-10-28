@@ -1,0 +1,6 @@
+def solution(numbers, k):
+    numbers = numbers * k
+    array =[]
+    for i in range(0,len(numbers),2):
+        array.append(numbers[i])
+    return array[k-1]
