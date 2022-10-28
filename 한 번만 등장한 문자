@@ -1,0 +1,11 @@
+def solution(s):
+    array =[]
+    s = list(s)
+    for i in s:
+        if s.count(i) == 1:
+            array.append(i)
+        else:
+            continue
+    array = sorted(array)
+    return "".join(array)
+    
