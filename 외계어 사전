@@ -1,0 +1,15 @@
+def solution(spell, dic):
+    spell = sorted(spell)
+    spell = "".join(spell)
+    count = 0
+    for i in dic:
+        i = sorted(i)
+        i = "".join(i)
+        if i == spell:
+            count = count + 1
+        else:
+            continue
+    if count >=1:
+        return 1
+    else:
+        return 2
