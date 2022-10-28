@@ -1,0 +1,5 @@
+def solution(i, j, k):
+    result = ""
+    for i in range(i,j+1):
+        result = result + "".join(str(i))
+    return result.count(str(k))
