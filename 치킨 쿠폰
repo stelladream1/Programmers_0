@@ -1,0 +1,26 @@
+# def solution(chicken):
+#     count = 0
+#     result = 0
+#     if chicken % 10 == 0:
+#         count = count - 1
+#     while True:
+#             print(divmod(chicken, 10))
+#             chicken, div = divmod(chicken, 10)
+#             result = result + div
+#             count = count + chicken
+#             print("count: ", count)
+#             print("div: ", result)
+
+#             if chicken < 10:
+#                 count = count + 1
+#                 break
+#     count  = count + (result // 10)
+#     return(count)
+
+def solution(chicken):
+    answer = 0
+    while chicken >= 10:
+        chicken, mod = divmod(chicken, 10)
+        answer += chicken
+        chicken += mod
+    return answer
