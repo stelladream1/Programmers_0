@@ -1,0 +1,50 @@
+
+
+def solution(quiz):
+    answer = []
+    for i in quiz:
+        c= i.split('=')
+        for j in range (len(c)):
+            if eval(c[0]) == eval(c[1]):
+                answer.append('O')
+                break
+            else:
+                answer.append('X')
+                break
+    return answer
+
+
+
+
+
+
+
+# import re
+
+# def solution(quiz):
+#     array = []
+#     string_array = []
+#     result = []
+#     for i in quiz:
+#         array.append(re.findall('\d+\s.\s\d+', i))
+
+        
+#     for k in range(len(quiz)):
+#         string = "".join(array[k])
+#         quiz[k] = quiz[k].replace(string, "")
+#         quiz[k] = quiz[k].replace("=", "")
+#         quiz[k] = quiz[k].strip()
+#         if int(quiz[k]) == eval(string):
+#             result.append("O")
+#         else:
+#             result.append("X")
+#     return result
+# #     for k in range(len(quiz)):
+# #         print(int(quiz[k]))
+# #         print(eval(string_array[k]))
+# #         if int(quiz[k]) == eval(string_array[k]):
+# #             result.append("O")
+# #         else:
+# #             result.append("X")
+# #     return result
+
