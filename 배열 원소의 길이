@@ -1,0 +1,5 @@
+def solution(strlist):
+    array = []
+    for i in strlist:
+        array.append(len(i))
+    return array
