@@ -1,0 +1,23 @@
+def solution(A, B):
+    array = []
+    result = 0
+    if A==B:
+        anwser = 0
+    else:
+        for i in range (len(A)):
+                A = A[-1] + A[0:len(A)-1]
+                array.append(A)
+                print(array)
+
+        for k in range(len(array)):
+                if array[k] == B:
+                    result = k+1
+                else:
+                    continue
+        if result > 0:
+            anwser = result
+        else:
+            anwser = -1
+    return anwser
+    
+    
