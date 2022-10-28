@@ -1,0 +1,7 @@
+def solution(cipher, code):
+    str = ""
+    cipher = "0" + cipher[:]
+    for i in range(len(cipher)):
+        if i % code == 0 and i !=0:
+                str = str + cipher[i]
+    return str
