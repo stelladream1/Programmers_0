@@ -1,0 +1,6 @@
+def solution(common):
+    if common[1]-common[0] == common[2]-common[1]:
+        result = common[len(common)-1] + common[1]-common[0]
+    else:
+        result = int(common[len(common)-1] * (common[1]/common[0]))
+    return (result)
