@@ -1,0 +1,27 @@
+
+# def solution(s):
+#     array = (re.findall('\d+\s[Z]',s))
+#     result = 0
+#     zz = re.findall('^ZZ$',s)
+#     zz = "".join(zz)
+    
+#     if zz in s:
+#         s = s.replace(zz,"")
+        
+#     for i in array:
+#             s = s.replace(i,"")
+#             print(s)
+#     s = list(s.split(" "))
+#     for i in s:       
+#         if i.isdigit() ==True:
+#             result = result + int(i)
+#     print(result)
+def solution(s):
+    numbers = []
+    ns = s.split(' ')
+    for n in ns:
+        if n == 'Z':
+            numbers.pop()
+        else:
+            numbers.append(int(n))
+    return sum(numbers)
