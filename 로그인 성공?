@@ -1,0 +1,11 @@
+def solution(id_pw, db):
+    array= []
+    for i in range(len(db)):
+        array.append(db[i][0])
+    print(array)
+    if id_pw in db:
+        return ("login")
+    elif id_pw[0] in array:
+        return("wrong pw")
+    else:
+        return("fail")
