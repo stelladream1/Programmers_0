@@ -1,0 +1,17 @@
+def solution(keyinput, board):
+    array = ["up","down","right","left"]
+    dx = [0,0,1,-1]
+    dy = [1,-1,0,0]
+    x, y = 0 , 0
+    limit_x = board[0]//2
+    limit_y = board[1]//2
+    
+    for key in keyinput:
+        nx = x + dx[array.index(key)]
+        ny = y + dy[array.index(key)]
+        print("x: ",x)
+        print("y: ",y)
+        if -limit_x <= nx <= limit_x and -limit_y <= ny <= limit_y:
+            x = nx
+            y = ny
+    return [x,y]
