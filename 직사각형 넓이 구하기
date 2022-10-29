@@ -1,0 +1,12 @@
+def solution(dots):
+    nx= dots[0][0]
+    ny= dots[0][1]
+    x,y = 0,0
+    for i in range(1,len(dots)):
+        if nx == dots[i][0]:
+            y = abs(dots[i][1] - ny)
+            
+        if ny == dots[i][1]:
+            x = abs(dots[i][0] - nx)
+            
+    return x*y
