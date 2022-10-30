@@ -1,0 +1,35 @@
+import re
+def solution(polynomial):
+    x_array = []
+    result = 0
+    x_result = 0
+    answer = ""
+    array = list(polynomial.split(" + "))
+    for i in array:
+        if i == "x":
+            x_array.append(i.replace("x","1"))
+        elif i.isdigit():
+            result = result + int(i)
+        else:
+            x_array.append(i.replace(i[-1],""))
+    for i in x_array:
+        x_result =  x_result + int(i)
+    if x_result != 0 and result != 0:
+        if x_result == 1:
+            answer = "x" + " + " + str(result)
+        else:
+            answer = str(x_result) + "x" + " + " + str(result)
+    else:
+        if x_result == 0:
+            answer = str(result)
+        elif result ==0:
+            if x_result == 1:                
+                answer = "x"
+            else:
+                answer = str(x_result) + "x"
+        else:
+            answer = 0
+                
+    return answer
+
+
