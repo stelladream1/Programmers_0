@@ -1,0 +1,12 @@
+def solution(array, n):
+    max = 100000
+    for i in array:
+        if abs(n - i) < max:
+            answer = i
+            max = abs(n - i)
+
+        if abs(n - i) == max:
+            answer = min(i, answer)
+
+
+    return answer
