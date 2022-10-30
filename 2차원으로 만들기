@@ -1,6 +1,0 @@
-def solution(num_list, n):
-    array = []
-    for i in range(n-1,len(num_list)+1,n):
-        array.append(num_list[i-n+1:i+1])
-    return array
-            
