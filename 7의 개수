@@ -1,0 +1,6 @@
+def solution(array):
+    array = list(array)
+    count = 0 
+    for i in range(len(array)):
+        count = count + str(array[i]).count("7")
+    return count
