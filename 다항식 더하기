@@ -31,5 +31,41 @@ def solution(polynomial):
             answer = 0
                 
     return answer
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    import re
+def solution(polynomial):
+    x_array = []
+    result = 0
+    x_result = 0
+    answer = ""
+    array = list(polynomial.split(" + "))
+    for i in array:
+        if i == "x":
+            x_array.append(i.replace("x","1"))
+        elif i.isdigit():
+            result = result + int(i)
+        else:
+            x_array.append(i.replace(i[-1],""))            
+    for i in x_array:
+        x_result =  x_result + int(i)
+        
+    if x_result and result :
+         answer = f'{x_result}x + {result}' if x_result > 1 else f'x + {result}'
+    elif x_result and not result:
+        answer = f'{x_result}x' if x_result > 1 else f'x'
+    else:
+         answer = f'{result}'
+    return answer
+
 
 
