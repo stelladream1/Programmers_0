@@ -1,0 +1,21 @@
+def solution(board):
+    array = []
+    count = 0
+    result_array = []
+    final = len(board) * len(board) 
+    for i in range(len(board)):
+        for j in range(len(board)):
+            if board[i][j] == 1:
+                array.append([i,j])
+    for i in array:
+        for k in range(i[0]-1,i[0]+2):
+            for j in range(i[1]-1,i[1]+2):
+                if [k,j] not in result_array:
+                    if 0<=k < len(board) and 0<= j < len(board):
+                        result_array.append([k,j])
+                        count = count + 1
+                    else:
+                        continue
+    print(result_array)
+    return final - count
+                
