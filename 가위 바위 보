@@ -1,0 +1,6 @@
+def solution(rsp):
+    array = []
+    dic = {"2":"0", "0":"5", "5":"2"}
+    for i in rsp:
+        array.append(dic[i])
+    return "".join(array)
