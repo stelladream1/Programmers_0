@@ -1,0 +1,8 @@
+def solution(score):
+    for i in range(len(score)):
+        score[i] = score[i][0] + score[i][1] 
+    array = []
+    sort_score = sorted(score, reverse = True)
+    for i in range(len(score)):
+        array.append(sort_score.index(score[i])+1)
+    return array
