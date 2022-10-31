@@ -1,0 +1,13 @@
+import re
+def solution(babbling):
+    array = ["aya","ye","woo","ma"]
+    count = 0
+    for i in array:
+        for j in range(len(babbling)):
+            if i in babbling[j]:
+                babbling[j] = babbling[j].replace(i,"1")
+    print(babbling)
+    for i in babbling:
+        if i.isdigit() ==True:
+            count = count + 1
+    return count
