@@ -1,0 +1,10 @@
+def solution(num, total):
+    array = []
+
+    for i in range(num):
+        if num % 2 !=0 :
+            array.append((total // num) - ((num//2)) + i)
+        else:
+            array.append((total // num) - ((num//2)-1) + i)
+
+    return array
