@@ -1,0 +1,21 @@
+import math
+def solution(denum1, num1, denum2, num2):
+    lmc = (num1 * num2 // math.gcd(num1, num2))
+    denum = (denum1 * (lmc // num1)) + (denum2 * (lmc // num2))
+    
+    if (math.gcd(lmc,denum)) != 1:      
+        return [denum // math.gcd( lmc,denum),lmc // math.gcd(lmc,denum) ]
+    return [denum,lmc]
+#     c = math.gcd(num1,num2) #최대공약수
+#     a = int((num1*num2) / c) #최소공배수
+
+#     denum1 = (a/num1) *denum1
+#     denum2 = (a/num2) *denum2
+#     q = int(denum1+denum2)
+
+#     if math.gcd(q,a) != 1:
+#         d = int(q/int(math.gcd(q,a)))
+#         e = int(a/int(math.gcd(q,a)))
+#         return [d,e]
+#     return [q,a]
+        
